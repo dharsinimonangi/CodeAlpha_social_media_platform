@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vibenet Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+   <!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+
+    <!-- LEFT -->
+
+    <div class="nav-left">
+
+        <a href="home.html" class="home-icon">
+
+            <i class="fa-solid fa-house"></i>
+
+        </a>
+
+    </div>
+
+
+    <!-- CENTER LOGO -->
+
+    <div class="logo">
+
+        Vibenet
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="nav-right">
+
+        <!-- NOTIFICATIONS -->
+
+        <div
+            class="icon-btn"
+            onclick="toggleNotifications()"
+        >
+
+            <i class="fa-regular fa-heart"></i>
+
+            <div
+                class="notification-box"
+                id="notificationBox"
+            >
+
+                <div id="notifications"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <div
+            class="icon-btn"
+            onclick="openMyProfile()"
+        >
+
+            <i class="fa-regular fa-user"></i>
+
+        </div>
+
+
+        <!-- LOGOUT -->
+
+        <button
+            onclick="logout()"
+            class="logout-btn"
+        >
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="container">
+
+
+        <!-- ================= CREATE POST ================= -->
+
+       <!-- ================= CREATE POST ================= -->
+
+<div class="card create-post-card">
+
+    <div class="create-top">
+
+        <div class="create-icon">
+            ✨
+        </div>
+
+        <div class="create-title">
+
+            <h2>
+                What's New Today?
+            </h2>
+
+            <p>
+                Drop your latest vibe, moments & thoughts
+            </p>
+
+        </div>
+
+    </div>
+
+    <textarea
+        id="postText"
+        placeholder="Type something amazing..."
+    ></textarea>
+
+    <label for="postImage" class="custom-upload">
+
+        📸 Add Photo
+
+    </label>
+
+    <input
+        type="file"
+        id="postImage"
+        accept="image/*"
+        hidden
+    >
+
+    <button onclick="createPost()" class="post-btn">
+
+        🚀 Create Post
+
+    </button>
+
+</div>
+
+        <!-- ================= POSTS ================= -->
+
+        <div id="posts"></div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

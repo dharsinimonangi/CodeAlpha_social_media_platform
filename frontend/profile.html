@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Vibenet Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME -->
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+   <!-- ================= NAVBAR ================= -->
+
+<div class="navbar">
+
+    <!-- LEFT -->
+
+    <div class="nav-left">
+
+        <a href="home.html" class="home-icon">
+
+            <i class="fa-solid fa-house"></i>
+
+        </a>
+
+    </div>
+
+
+    <!-- CENTER LOGO -->
+
+    <div class="logo">
+
+        Vibenet
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="nav-right">
+
+        <!-- NOTIFICATIONS -->
+
+        <div
+            class="icon-btn"
+            onclick="toggleNotifications()"
+        >
+
+            <i class="fa-regular fa-heart"></i>
+
+            <div
+                class="notification-box"
+                id="notificationBox"
+            >
+
+                <div id="notifications"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <div
+            class="icon-btn"
+            onclick="openMyProfile()"
+        >
+
+            <i class="fa-regular fa-user"></i>
+
+        </div>
+
+
+        <!-- LOGOUT -->
+
+        <button
+            onclick="logout()"
+            class="logout-btn"
+        >
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- ================= PROFILE ================= -->
+
+    <div class="container">
+
+        <div class="card profile-header">
+
+            <!-- PROFILE PIC -->
+
+            <div class="default-profile-pic">
+
+                👤
+
+            </div>
+
+
+            <!-- USERNAME -->
+
+            <h2 id="profileName">
+
+                Username
+
+            </h2>
+
+
+            <!-- FOLLOW SECTION -->
+
+            <div class="follow-section">
+
+                <!-- FOLLOWERS -->
+
+                <div onclick="showFollowers()">
+
+                    <h3 id="followers">0</h3>
+
+                    <p>Followers</p>
+
+                </div>
+
+
+                <!-- FOLLOWING -->
+
+                <div onclick="showFollowing()">
+
+                    <h3 id="following">0</h3>
+
+                    <p>Following</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOLLOW BUTTON -->
+
+            <button
+                id="followBtn"
+                class="profile-follow-btn"
+                onclick="followUser()"
+            >
+
+                Follow
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOLLOW MODAL ================= -->
+
+    <div
+        class="follow-modal"
+        id="followModal"
+    >
+
+        <div class="follow-content">
+
+            <div class="follow-header">
+
+                <h2 id="followTitle">
+
+                    Followers
+
+                </h2>
+
+                <span onclick="closeFollowModal()">
+
+                    ✖
+
+                </span>
+
+            </div>
+
+            <div id="followList"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
